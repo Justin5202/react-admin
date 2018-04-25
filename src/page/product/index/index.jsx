@@ -69,7 +69,7 @@ class ProductList extends React.Component {
         status: status
       }).then(res => {
         _mm.successTips(res)
-        this.loadProductlist()
+        this.loadProductList()
       }, errMsg => _mm.errorTips(errMsg))
     }
   }
@@ -112,8 +112,8 @@ class ProductList extends React.Component {
                     </button>
                   </td>
                   <td>
-                    <Link className="opear" to={`/product/detail${product.id}`}>查看详情</Link>
-                    <Link className="opear" to={`/product/save${product.id}`}>编辑</Link>
+                    <Link className="opear" to={`/product/detail/${product.id}`}>查看详情</Link>
+                    <Link className="opear" to={`/product/save/${product.id}`}>编辑</Link>
                   </td>
                 </tr>
               )

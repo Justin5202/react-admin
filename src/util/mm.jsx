@@ -30,7 +30,8 @@ class mUtil {
     let queryString = window.location.search.split('?')[1] || '',
         reg = new RegExp('(^|&)' + name + '=([^&])(&|$)*'),
         result = queryString.match(reg)
-    return result ? decodeURICompoenent(result[2]) : null
+    console.log(result)
+    return result ? decodeURIComponent(result[2]) : null
   }
   // 错误提示
   errorTips(errMsg) {
