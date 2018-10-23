@@ -1,6 +1,6 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-import {BrowserRouter as Router, Switch, Route, Redirect, Link} from 'react-router-dom'
+import { BrowserRouter as Router, Switch, Route, Redirect, Link } from 'react-router-dom'
 
 import Layout from 'component/layout/index.jsx'
 //页面
@@ -10,7 +10,7 @@ import UserList from 'page/user/index.jsx'
 import ErrorPage from 'page/error/index.jsx'
 import ProductRouter from 'page/product/router.jsx'
 
-class App extends React.Component{
+class App extends React.Component {
   render() {
     return (
       <Router>
@@ -24,7 +24,7 @@ class App extends React.Component{
                 <Route path="/product-catetory" component={ProductRouter} />
                 <Route path="/user/index" component={UserList} />
                 <Redirect exact from="/user" to="/user/index" />
-                <Route component={ErrorPage}/>
+                <Route component={ErrorPage} />
               </Switch>
             </Layout>
           )} />
@@ -35,6 +35,6 @@ class App extends React.Component{
 }
 
 ReactDOM.render(
-  <App/>,
+  <App />,
   document.getElementById('app')
 )

@@ -108,6 +108,7 @@ class ProductSave extends React.Component{
       product.id = this.state.id
     }
     if(productCheckResult.status) {
+      console.log(product)
       _product.saveProduct(product).then(res => {
         _mm.successTips(res)
         this.props.history.push('/product')
